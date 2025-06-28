@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pengecek Cuaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-red-500 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm">
+        <h1 class="text-xl font-bold mb-4 text-center">Cek Cuaca</h1>
+        <input type="text" id="namaKota" placeholder="masukkan nama kota..." class="w-full px-4 py-2 border border-blue-500 rounded-md mb-4" />
+        <button onclick="getWeather()" class="bg-blue-500 text-white px-4 py-2 rounded-md w-full">
+      Cek Cuaca
+    </button>
+
+        <div id="result" class="mt-6 hidden">
+            <h2 id="cityName" class="text-lg font-semibold mb-4 text-center"></h2>
+            <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="flex flex-col items-center p-2 border rounded">
+                    <img src="Gambar/Hand Thermometer.jpeg" class="w-8 h-8 mb-1" alt="temperature" />
+                    <p class="text-xs">Temperature</p>
+                    <p id="temperature" class="font-bold"></p>
+                </div>
+                <div class="flex flex-col items-center p-2 border rounded">
+                    <img src="Gambar/Humidity free icons designed by Freepik.jpeg" class="w-8 h-8 mb-1" alt="humidity" />
+                    <p class="text-xs">Humidity</p>
+                    <p id="humidity" class="font-bold"></p>
+                </div>
+                <div class="flex flex-col items-center p-2 border rounded">
+                    <img src="Gambar/Screenshot 2025-06-28 092556.png" class="w-8 h-8 mb-1" alt="pressure" />
+                    <p class="text-xs">Pressure</p>
+                    <p id="pressure" class="font-bold"></p>
+                </div>
+                <div class="flex flex-col items-center p-2 border rounded">
+                    <img id="icon" class="w-12 h-12 mb-1" alt="weather icon " />
+                    <p class="text-xs">Condition</p>
+                    <p id="condition" class="font-bold"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
